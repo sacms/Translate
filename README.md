@@ -4,10 +4,14 @@ Translate Google by Shakib Ahmed
 # Usages
 
 $text = 'আমার সোনার বাংলা আমি তোমায় ভালোবাসি'; // text
+
 $q = str_replace(' ', '+', $text);
+
 $sl = 'bn'; // $q  & orginal text language code
+
 $tl = 'hi'; // translate language code
-$tr = sacms('https://expertskb.herokuapp.com/tr.php?q='.$q.'&sl='.$sl.'&tl='.$tl);
+
+# Code
 
 $skb = json_decode($tr);
 

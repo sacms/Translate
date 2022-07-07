@@ -11,12 +11,15 @@ $sl = 'bn'; // $q  & orginal text language code
 
 $tl = 'hi'; // translate language code
 
-# Code
+# Warning 
 
-$skb = json_decode($tr);
+Do not remove 
 
 $tr = mb_convert_encoding($skb->text, "UTF-8"); // encode text utf-8 to real text
 
+This code
+
+# Usages Code
 
 <br> <b> Main Text: </b> $text  <br>
 <b>Translated Text: </b> $tr 

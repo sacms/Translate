@@ -17,9 +17,9 @@ $skb = json_decode($tr);
 
 $tr = mb_convert_encoding($skb->text, "UTF-8"); // encode text utf-8 to real text
 
-echo '
-<br> <b> Main Text: </b>'.$text.' <br>
-<b>Translated Text: </b>'.$tr.' 
-<br> <b> Main Text Language: </b>'.$skb->sl.'
-<br> <b> Translated Text Language: </b>'.$skb->tl.'
-<br> <b> Response: </b>'.$skb->response.'
+
+<br> <b> Main Text: </b> $text  <br>
+<b>Translated Text: </b> $tr 
+<br> <b> Main Text Language: </b> $skb->sl
+<br> <b> Translated Text Language: </b> $skb->tl
+<br> <b> Response: </b> $skb->response

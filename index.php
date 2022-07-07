@@ -23,7 +23,7 @@ $tr = sacms("https://expertskb.herokuapp.com/tr.php?q=amar+nam+shakib&sl=bn&tl=e
 $skb = json_decode($tr);
 
 echo '
-<b> Text: </b>'.$skb->text.' 
+<b> Text: </b>'.mb_convert_encoding($skb->text, "UTF-8").' 
 <br> <b> Main Text: </b>'.$skb->sl.'
 <br> <b> Translate Text: </b>'.$skb->tl.'
 <br> <b> Response: </b>'.$skb->response.'

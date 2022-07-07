@@ -5,8 +5,6 @@ Translate Google by Shakib Ahmed
 
 $text = 'আমার সোনার বাংলা আমি তোমায় ভালোবাসি'; // text
 
-$q = str_replace(' ', '+', $text);
-
 $sl = 'bn'; // $q  & orginal text language code
 
 $tl = 'hi'; // translate language code

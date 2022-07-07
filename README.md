@@ -23,3 +23,7 @@ $tr = mb_convert_encoding($skb->text, "UTF-8"); // encode text utf-8 to real tex
 <br> <b> Main Text Language: </b> $skb->sl
 <br> <b> Translated Text Language: </b> $skb->tl
 <br> <b> Response: </b> $skb->response
+
+# Screenshot
+
+<img src="https://i.imgur.com/Ym1wA6A.png" height="200" width="100%"/>

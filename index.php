@@ -17,15 +17,23 @@ function sacms($url) {
     curl_close($ch);
    
 }
-
-$tr = sacms("https://expertskb.herokuapp.com/tr.php?q=amar+nam+shakib&sl=bn&tl=en");
+$text = 'আমার সোনার বাংলা আমি তোমায় ভালোবাসি'; // text
+$q = str_replace(' ', '+', $text);
+$sl = 'bn'; // $q  & orginal text language code
+$tl = 'hi'; // translate language code
+$tr = sacms('https://expertskb.herokuapp.com/tr.php?q='.$q.'&sl='.$sl.'&tl='.$tl);
 
 $skb = json_decode($tr);
 
+$tr = mb_convert_encoding($skb->text, "UTF-8"); // encode text utf-8 to real text
+
 echo '
-<b> Text: </b>'.mb_convert_encoding($skb->text, "UTF-8").' 
-<br> <b> Main Text: </b>'.$skb->sl.'
-<br> <b> Translate Text: </b>'.$skb->tl.'
+<br> <b> Main Text: </b>'.$text.' <br>
+<b>Translated Text: </b>'.$tr.' 
+<br> <b> Main Text Language: </b>'.$skb->sl.'
+<br> <b> Translated Text Language: </b>'.$skb->tl.'
 <br> <b> Response: </b>'.$skb->response.'
+
+</b>';
     
     ?>

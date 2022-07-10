@@ -21,7 +21,7 @@ $text = 'আমার সোনার বাংলা আমি তোমায় 
 $q = str_replace(' ', '+', $text);
 $sl = 'bn'; // $text  & orginal text language code
 $tl = 'hi'; // translate language code
-$tr = sacms('https://expertskb.herokuapp.com/tr.php?q='.$q.'&sl='.$sl.'&tl='.$tl);
+$tr = sacms('https://api.shakib.cyou/translate.php?q='.$q.'&sl='.$sl.'&tl='.$tl);
 
 $skb = json_decode($tr);
 
